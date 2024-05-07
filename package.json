@@ -1,0 +1,15 @@
+{
+  "name": "@phanect/configs",
+  "version": "2024.5.28",
+  "description": "Collection of [@phanect](https://github.com/phanect)'s personal configuration files",
+  "author": "Jumpei Ogawa (https://phanective.org)",
+  "homepage": "https://github.com/phanect/configs",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phanect/configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phanect/configs/issues"
+  },
+  "license": "CC0-1.0",
+}
