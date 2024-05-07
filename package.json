@@ -4,4 +4,19 @@
   "description": "Internal configuration files for [@phanect](https://github.com/phanect)'s project",
   "author": "Jumpei Ogawa (https://phanective.org)",
   "license": "CC0-1.0",
+  "type": "module",
+  "scripts": {
+    "lint": "tsc --noEmit && eslint .",
+    "release": "npm publish --access public --non-interactive"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "eslint": "^8.57.0",
+    "eslint-config-phanective": "latest",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=10"
+  }
 }
