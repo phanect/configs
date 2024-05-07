@@ -1,0 +1,7 @@
+{
+  "name": "@phanective/configs",
+  "version": "2024.5.7",
+  "description": "Internal configuration files for [@phanect](https://github.com/phanect)'s project",
+  "author": "Jumpei Ogawa (https://phanective.org)",
+  "license": "CC0-1.0",
+}
