@@ -13,6 +13,14 @@
   },
   "license": "CC0-1.0",
   "type": "module",
+  "exports": {
+    "./tsconfig/cloudflare": "./tsconfig/tsconfig.cloudflare.json",
+    "./tsconfig/frontend": "./tsconfig/tsconfig.frontend.json",
+    "./tsconfig/nodejs": "./tsconfig/tsconfig.nodejs.json",
+    "./tsconfig/addons/jsx": "./tsconfig/addons/tsconfig.jsx.json",
+    "./tsconfig/addons/npm": "./tsconfig/addons/tsconfig.npm.json",
+    "./tsconfig/addons/vite": "./tsconfig/addons/tsconfig.vite.json"
+  },
   "scripts": {
     "lint": "tsc --noEmit && eslint .",
     "release": "npm publish --access public --non-interactive"
