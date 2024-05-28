@@ -1,0 +1,16 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "svelte",
+    "json",
+    "jsonc",
+    "json5",
+  ],
+  "eslint.probe": [
+    "javascriptreact",
+    "typescriptreact",
+    "html",
+    "vue",
+  ],
+}
