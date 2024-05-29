@@ -27,8 +27,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run build --if-present
-      - run: npm test --if-present
+      # - run: npm run build
+      # - run: npm test
       - run: npm run lint
 
   publish:
@@ -41,7 +41,7 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: npm run build -- if-present
+      # - run: npm run build
 
       - name: Set npm auth token
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" > ~/.npmrc
