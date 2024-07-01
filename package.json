@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.10",
-    "eslint": "^8.57.0",
+    "eslint": "^9.6.0",
     "eslint-config-phanective": "latest",
     "typescript": "^5.4.5"
   },
