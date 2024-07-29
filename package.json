@@ -26,7 +26,7 @@
     "release": "npm publish --access public --non-interactive"
   },
   "devDependencies": {
-    "@types/node": "^20.12.10",
+    "@types/node": "^22.0.0",
     "eslint": "^8.57.0",
     "eslint-config-phanective": "latest",
     "typescript": "^5.4.5"
