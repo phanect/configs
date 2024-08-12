@@ -19,7 +19,8 @@
     "./tsconfig/nodejs": "./configs/tsconfig/tsconfig.nodejs.json",
     "./tsconfig/addons/jsx": "./configs/tsconfig/addons/tsconfig.jsx.json",
     "./tsconfig/addons/npm": "./configs/tsconfig/addons/tsconfig.npm.json",
-    "./tsconfig/addons/vite": "./configs/tsconfig/addons/tsconfig.vite.json"
+    "./tsconfig/addons/vite": "./configs/tsconfig/addons/tsconfig.vite.json",
+    "./biome": "./configs/biome.jsonc"
   },
   "scripts": {
     "lint": "tsc --noEmit && eslint .",

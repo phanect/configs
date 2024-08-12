@@ -1,0 +1,123 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "linter": {
+    "enabled": true,
+    "ignore": ["**/package-lock.json"],
+
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noVoid": "warn",
+        "useOptionalChain": "warn",
+        "useSimplifiedLogicExpression": "warn"
+      },
+      "correctness": {
+        "noConstantMathMinMaxClamp": "warn",
+        "noNewSymbol": "error",
+        "noUndeclaredVariables": "error",
+        "noUnusedImports": "error",
+        "noUnusedPrivateClassMembers": "error",
+        "noUnusedVariables": "error",
+        "useArrayLiterals": "warn"
+      },
+      // Since nursery group is unstable, disable them for now.
+      // "nursery": {
+      //   "noDoneCallback": "warn",
+      //   "noDuplicateAtImportRules": "error",
+      //   "noDuplicateElseIf": "error",
+      //   "noDuplicateFontNames": "error"
+      // },
+      "style": {
+        // Reason: See the [doc](https://biomejs.dev/linter/rules/no-default-export/)
+        "noDefaultExport": "error",
+        // Reason: See the [doc](https://biomejs.dev/linter/rules/no-namespace/)
+        "noNamespace": "error",
+        // We don't have to use star import (e.g. `import * as foo from "bar"`) recently,
+        // so I guess we can forbid them safely. If we have chances to use it,
+        // you can disable this rule.
+        "noNamespaceImport": "error",
+        // Experimental. If code readability is reduced by this rule,
+        // we will consider to disable this option.
+        "noNegationElse": "warn",
+        // Forbid jQuery
+        "noRestrictedGlobals": {
+          "level": "error",
+          "options": {
+            "deniedGlobals": ["$"]
+          }
+        },
+        // Reason: Ogawa's personal preference
+        "noShoutyConstants": "warn",
+        // Reason: To avoid the following mistake.
+        //
+        // ```js
+        // if (foo)
+        //   a();
+        //   b(); // This is executed even if foo is falsy.
+        // ```
+        //
+        // However, I don't make this mistake recently, so if someone don't like this rule,
+        // I accept disabling this rule.
+        "useBlockStatements": "error",
+        // Reason: Ogawa's Personal preference
+        "useForOf": "warn",
+
+        //
+        // Off
+        //
+
+        // Reason: Ogawa's personal preference.
+        // This rule prefers `Number.parseInt()` to `parseInt()`.
+        // Adding `Number.` is a bit redundant.
+        "useNumberNamespace": "off"
+      },
+      "suspicious": {
+        "useAwait": "error"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "ignore": ["**/package-lock.json"],
+
+    "formatWithErrors": false,
+    "attributePosition": "auto",
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf"
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "json": {
+    "parser": {
+      "allowComments": true,
+      // This option allows to automatically remove trailing commas.
+      // Note that this option still raises errors when trailing commas are in the JSONs unless you set `json.formatter.trailingCommas: "all"` in this config file.
+      "allowTrailingCommas": true
+    },
+    "formatter": {
+      // This also bans trailing commas in JSONc because it is hard to
+      // configure VSCode to allow the trailing commas in JSONc.
+      "trailingCommas": "none"
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
+  },
+  "overrides": [
+    {
+      "include": ["*.vue", "*.svelte", "*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
+}
