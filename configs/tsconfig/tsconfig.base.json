@@ -15,7 +15,7 @@
     "removeComments": true,
 
     // Module resolution
-    "lib": [ "esnext" ],
-    "resolveJsonModule": true,
-  },
+    "lib": ["esnext"],
+    "resolveJsonModule": true
+  }
 }
