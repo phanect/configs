@@ -12,6 +12,8 @@ npm install -D typescript @types/node @biomejs/biome
 
 ### Usage
 
+tsconfig.json
+
 ```json
 {
   "extends": [
