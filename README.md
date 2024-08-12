@@ -2,6 +2,12 @@
 
 Collection of personal configuration files for [@phanect](https://github.com/phanect)
 
+## Install packages
+
+```sh
+npm install -D typescript @types/node @biomejs/biome
+```
+
 ## tsconfig
 
 ### Usage
@@ -23,6 +29,18 @@ Collection of personal configuration files for [@phanect](https://github.com/pha
 - `@phanect/configs/tsconfig/addons/jsx`: Supplemental tsconfig for JSX projects
 - `@phanect/configs/tsconfig/addons/npm`: Supplemental tsconfig for npm package (Generates .d.ts files)
 - `@phanect/configs/tsconfig/addons/vite`: Supplemental tsconfig for projects using Vite
+
+## Biome
+
+### Usage
+
+biome.jsonc
+
+```jsonc
+{
+  "extends": ["@phanect/configs/biome"]
+}
+```
 
 ## License
 
