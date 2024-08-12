@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["./configs/biome.jsonc"],
+
+  // Treat tsconfig.*.json as JSONc
+  "overrides": [
+    {
+      "include": [
+        "./configs/tsconfig/tsconfig.*.json",
+        "./configs/tsconfig/**/tsconfig.*.json"
+      ],
+      "json": {
+        "parser": {
+          "allowComments": true,
+          // This option allows to automatically remove trailing commas.
+          // Note that this option still raises errors when trailing commas are in the JSONs.
+          "allowTrailingCommas": true
+        }
+      }
+    }
+  ]
+}
