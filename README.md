@@ -40,6 +40,7 @@ biome.jsonc
 
 ```jsonc
 {
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "extends": ["@phanect/configs/biome"]
 }
 ```
