@@ -5,7 +5,7 @@ Collection of personal configuration files for [@phanect](https://github.com/pha
 ## Install packages
 
 ```sh
-npm install -D typescript @types/node @biomejs/biome
+npm install -D @phanect/configs typescript @types/node @biomejs/biome
 ```
 
 ## tsconfig
