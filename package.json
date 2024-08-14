@@ -32,6 +32,22 @@
     "@types/node": "^22.1.0",
     "typescript": "^5.4.5"
   },
+  "peerDependencies": {
+    "@biomejs/biome": "*",
+    "@types/node": "*",
+    "typescript": "*"
+  },
+  "peerDependenciesMeta": {
+    "@biomejs/biome": {
+      "optional": true
+    },
+    "@types/node": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
   "engines": {
     "node": ">=18.x",
     "npm": ">=10"
