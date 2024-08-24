@@ -117,12 +117,17 @@
     "defaultBranch": "main"
   },
   "overrides": [
+    // These rules does not work properly on *.vue, *.svelte, and *.astro files as of now
     {
       "include": ["*.vue", "*.svelte", "*.astro"],
       "linter": {
         "rules": {
           "correctness": {
-            "noUnusedImports": "off"
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off"
+          },
+          "style": {
+            "useImportType": "off"
           }
         }
       }
