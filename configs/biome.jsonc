@@ -66,10 +66,18 @@
         // Off
         //
 
+        // Reason: IMO, `else` block improve readability because it emphasizes that
+        // the processes in the `else` block are executed "if not".
+        "noUselessElse": "off",
+
         // Reason: Ogawa's personal preference.
         // This rule prefers `Number.parseInt()` to `parseInt()`.
         // Adding `Number.` is a bit redundant.
-        "useNumberNamespace": "off"
+        "useNumberNamespace": "off",
+
+        // Reason: When concatenating strings with complex conditions using ternary oprators,
+        // it is often readable to use `+` operator rather than template string (`\`\``)
+        "useTemplate": "off"
       },
       "suspicious": {
         "useAwait": "error"
@@ -109,12 +117,17 @@
     "defaultBranch": "main"
   },
   "overrides": [
+    // These rules does not work properly on *.vue, *.svelte, and *.astro files as of now
     {
       "include": ["*.vue", "*.svelte", "*.astro"],
       "linter": {
         "rules": {
           "correctness": {
-            "noUnusedImports": "off"
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off"
+          },
+          "style": {
+            "useImportType": "off"
           }
         }
       }
