@@ -1,21 +1,8 @@
-name: GitHub Actions
+when:
+  - event: release
 
-on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
-  release:
-    types:
-      - published
-
-permissions:
-  contents: read
-
-jobs:
-  publish:
+steps:
+  - name: publish
     needs:
       - test
       - lint

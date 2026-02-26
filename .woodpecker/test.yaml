@@ -1,38 +1,19 @@
-name: GitHub Actions
+when:
+  - event: pull_request
+    branch: main
+  - event: push
+    branch: main
+  - event: release
 
-on:
-  pull_request:
-    branches:
-      - main
-  push:
-    branches:
-      - main
-  release:
-    types:
-      - published
+matrix:
+  # Override Node.js version over mise.toml
+  MISE_NODE_VERSION:
+    - 20
+    - 22
+    - 24
 
-permissions:
-  contents: read
-
-jobs:
-  test:
-    name: test (Node.js v${{ matrix.node-version }})
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    strategy:
-      matrix:
-        node-version:
-          - 20
-          - 22
-          - 24
-    env:
-      # Override Node.js version over mise.toml
-      MISE_NODE_VERSION: ${{ matrix.node-version }}
-    steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
-      - uses: jdx/mise-action@c53b9236f0b3370f31520f8b142f141256d839c6 # v3.6.0
-        with:
-          install: true
-          cache: true
-
-      - run: mise test
+steps:
+  - name: test
+    commands:
+      - mise install
+      - mise test
