@@ -6,7 +6,7 @@ monorepo_root = true
 config_roots = [ "projects/*" ]
 
 [tools]
-node = { version = "{{ env['NODE_VERSION'] | default(value='lts') }}" }
+node = "26"
 
 [tasks]
   [tasks.build]
