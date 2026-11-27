@@ -27,7 +27,7 @@
         "better-auth",
       ],
       schedule: [
-        "* 9 * * *", // Everyday at 9:00
+        "* 19 * * *", // Everyday at 19:00
       ],
       prPriority: 90,
     },
@@ -37,7 +37,7 @@
       matchPackageNames: [ "postgres" ],
       allowedVersions: "<{{add major 1}}",
       schedule: [
-        "* 9 * * MON", // At 9:00 on every Monday
+        "* 19 * * MON", // At 19:00 on every Monday
       ],
       prPriority: 50,
     },
@@ -57,7 +57,7 @@
       ],
 
       schedule: [
-        "* 9 * * MON", // At 9:00 on every Monday
+        "* 19 * * MON", // At 19:00 on every Monday
       ],
       prPriority: 50,
     },
@@ -68,7 +68,7 @@
         "github-runners",
       ],
       schedule: [
-        "* 9 * * MON", // At 9:00 on every Monday
+        "* 19 * * MON", // At 19:00 on every Monday
       ],
       prPriority: 50,
     },
@@ -83,7 +83,7 @@
         "typescript-eslint",
       ],
       schedule: [
-        "* 9 * * MON", // At 9:00 on every Monday
+        "* 19 * * MON", // At 19:00 on every Monday
       ],
       prPriority: 40,
     },
