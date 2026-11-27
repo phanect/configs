@@ -26,13 +26,13 @@ export const jsonConfigs: Linter.Config[] = defineConfig([
   },
   {
     files: [ "**/*.json" ],
-    ignores: [ "**/tsconfig.json", ".vscode/**/*.json" ],
+    ignores: [ "**/tsconfig.json", ".vscode/**/*.json", ".theia/**/*.json" ],
     extends: [
       jsonc.configs["flat/recommended-with-json"],
     ],
   },
   {
-    files: [ "**/*.jsonc", "**/tsconfig.json", ".vscode/**/*.json" ],
+    files: [ "**/*.jsonc", "**/tsconfig.json", ".vscode/**/*.json", ".theia/**/*.json" ],
     extends: [
       jsonc.configs["flat/recommended-with-jsonc"],
     ],
