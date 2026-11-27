@@ -3,11 +3,15 @@
   "javascript.preferences.quoteStyle": "double",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
 
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+
   // Disable default editor formatters
   "typescript.format.enable": false,
   "javascript.format.enable": false,
   "json.format.enable": false,
   "json5.format.enable": false,
+  "prettier.enable": false,
 
   "eslint.useFlatConfig": true,
   "eslint.validate": [
@@ -21,11 +25,8 @@
     "html",
     "json",
     "jsonc",
-    "json5",
+    "json5"
   ],
-
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.mode": "problems",
 
@@ -61,7 +62,5 @@
   },
   "[json5]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-
-  "prettier.enable": false
+  }
 }
