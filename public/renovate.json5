@@ -16,6 +16,7 @@
   vulnerabilityAlerts: {
     labels: [ "security" ],
     vulnerabilityFixStrategy: "highest",
+    schedule: [ "* 19 * * *" ], // Everyday at 19:00
   },
 
   packageRules: [
