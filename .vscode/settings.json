@@ -3,6 +3,12 @@
   "javascript.preferences.quoteStyle": "double",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
 
+  // Disable default editor formatters
+  "typescript.format.enable": false,
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "json5.format.enable": false,
+
   "eslint.useFlatConfig": true,
   "eslint.validate": [
     "javascript",
@@ -20,20 +26,42 @@
 
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-  },
   "eslint.format.enable": true,
-  "eslint.codeActionsOnSave.mode": "all",
-  "eslint.codeActionsOnSave.rules": [
-    "@stylistic/arrow-parens",
-    "@stylistic/quotes",
-    "@stylistic/semi",
-    "@stylistic/space-before-blocks",
-    "@stylistic/space-before-function-paren",
-    "@stylistic/space-in-parens"
-  ],
+  "eslint.codeActionsOnSave.mode": "problems",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json5]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
 
   "prettier.enable": false
 }
