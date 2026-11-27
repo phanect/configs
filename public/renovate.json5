@@ -16,7 +16,7 @@
   vulnerabilityAlerts: {
     labels: [ "security" ],
     vulnerabilityFixStrategy: "highest",
-    schedule: [ "* 19 * * *" ], // Everyday at 19:00
+    schedule: [ "* 19 * * *" ], // Every day at 19:00
   },
 
   packageRules: [
@@ -27,11 +27,11 @@
         "better-auth",
       ],
       schedule: [
-        "* 19 * * *", // Everyday at 19:00
+        "* 19 * * *", // Every day at 19:00
       ],
       prPriority: 90,
     },
-    // surpress major update
+    // suppress major update
     {
       matchDatasources: [ "docker" ],
       matchPackageNames: [ "postgres" ],
@@ -62,7 +62,7 @@
       prPriority: 50,
     },
     {
-      groupName: "Github Actions",
+      groupName: "GitHub Actions",
       matchDatasources: [
         "github-tags",
         "github-runners",
