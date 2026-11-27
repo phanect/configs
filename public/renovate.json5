@@ -33,15 +33,6 @@
     },
     // surpress major update
     {
-      matchDatasources: [ "npm" ],
-      matchPackageNames: [ "@types/node" ],
-      allowedVersions: "<{{add major 1}}",
-      schedule: [
-        "* 9 * * MON", // At 9:00 on every Monday
-      ],
-      prPriority: 50,
-    },
-    {
       matchDatasources: [ "docker" ],
       matchPackageNames: [ "postgres" ],
       allowedVersions: "<{{add major 1}}",
