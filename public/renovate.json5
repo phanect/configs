@@ -16,7 +16,6 @@
   vulnerabilityAlerts: {
     labels: [ "security" ],
     vulnerabilityFixStrategy: "highest",
-    prPriority: 100,
   },
 
   packageRules: [
