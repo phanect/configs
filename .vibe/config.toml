@@ -1,0 +1,18 @@
+[mcp]
+[[mcp.servers]]
+name = "mdn"
+type = "http"
+url = "https://mcp.mdn.mozilla.net/"
+
+[[mcp.servers]]
+name = "eslint"
+type = "command"
+command = "pnpm"
+args = [ "exec", "eslint", "--mcp" ]
+
+[[mcp.servers]]
+name = "mise"
+type = "command"
+command = "mise"
+args = [ "mcp" ]
+env = { MISE_EXPERIMENTAL = "1" }
