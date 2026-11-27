@@ -10,6 +10,17 @@
   },
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "lint": "pnpm build && tsc --noEmit && eslint && pnpm -r lint",
+    "fix": "pnpm build && eslint --fix && pnpm -r --if-present fix",
+    "test": "pnpm -r test",
+    "release": "pnpm release:readme && pnpm build && pnpm --recursive publish --provenance --access=public",
+    "release:readme": "jiti scripts/release-readme.ts",
+    "versions": "jiti scripts/versions.ts",
+    "clean": "git clean -dX --exclude=\"!mise.local.toml\" --force",
+    "refresh": "pnpm clean && rm --force ./pnpm-lock.yaml && mise install"
+  },
   "workspaces": [
     "projects/*",
     "examples/*"
