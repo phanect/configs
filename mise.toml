@@ -7,6 +7,7 @@ config_roots = [ "projects/*" ]
 
 [tools]
 node = "26"
+pnpm = "12"
 
 [tasks]
   [tasks.build]
@@ -37,8 +38,6 @@ node = "26"
   depends = [ "clean" ]
   run = [
     "rm --force ./pnpm-lock.yaml",
-    "corepack enable",
-    "corepack up",
     "mise install"
   ]
 
@@ -50,10 +49,7 @@ node = "26"
   run = "pnpm --recursive publish --provenance --access=public"
 
 [hooks]
-postinstall = [
-  "corepack enable",
-  "pnpm install",
-]
+postinstall = "pnpm install"
 
 [env]
 _.path = "./node_modules/.bin"
