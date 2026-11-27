@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { mkdir, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const subProjectRootPath = join(import.meta.dirname, "../../..");
+const subProjectRootPath = join(import.meta.dirname, "..");
 const tsconfigDirPath = join(subProjectRootPath, "configs/ts/");
 const tmpDirPath = join(subProjectRootPath, "tmp/");
 

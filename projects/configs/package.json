@@ -10,6 +10,10 @@
     "url": "git@github.com:phanect/configs.git"
   },
   "type": "module",
+  "scripts": {
+    "build": "jiti scripts/build-prep.ts && tsdown",
+    "lint": "tsc --noEmit"
+  },
   "files": [
     "./configs",
     "./dist",

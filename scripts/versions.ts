@@ -3,12 +3,12 @@
 import { writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { loadJSON } from "@phanect/utils/nodejs";
-import { getExampleDirPaths, getProjectDirPaths } from "./_libs/utils.ts";
+import { getExampleDirPaths, getProjectDirPaths } from "./libs/utils.ts";
 import type { PackageJson } from "type-fest";
 
 const packageJsonPaths = [
   // Project root
-  join(import.meta.dirname, "../../package.json"),
+  join(import.meta.dirname, "../package.json"),
   // projects/*/package.json
   ...(
     (await getProjectDirPaths())

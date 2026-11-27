@@ -10,6 +10,11 @@
     "url": "git@github.com:phanect/configs.git"
   },
   "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "lint": "tsc --noEmit",
+    "test": "vitest run"
+  },
   "files": [
     "./dist",
     "./README.md"
