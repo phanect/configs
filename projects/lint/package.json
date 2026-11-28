@@ -33,7 +33,7 @@
   "dependencies": {
     "@eslint/css": "^2.0.0",
     "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.2.3",
+    "@stylistic/eslint-plugin": "^6.0.0",
     "@vitest/eslint-plugin": "^1.6.16",
     "eslint-import-resolver-typescript": "^4.2.2",
     "eslint-plugin-import": "^2.31.0",
