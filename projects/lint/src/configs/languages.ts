@@ -179,6 +179,12 @@ export const commonConfigs: Linter.Config[] = defineConfig([
       "@stylistic/arrow-parens": [ "warn", "always" ],
       "@stylistic/brace-style": [ "warn", "1tbs" ],
       curly: "warn",
+      // As of @stylistic v6, `array-bracket-spacing` & `object-curly-spacing` are deprecated
+      // in favor of `list-style`, but `list-style` cannot express our style
+      // (e.g. `[ "error", { ... }]` and wrapped lists with multiple items per line).
+      // Keep the deprecated rules and disable `list-style` until the gap is filled.
+      // https://github.com/eslint-stylistic/eslint-stylistic/issues/1342
+      "@stylistic/list-style": "off",
       "@stylistic/member-delimiter-style": [ "warn", {
         multiline: {
           delimiter: "semi",
